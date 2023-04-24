@@ -1,7 +1,7 @@
-import Image from "next/image";
-import formatPrice from "@/util/PriceFormat";
-import { ProductType } from "@/types/ProductType";
-import Link from "next/link";
+import Image from "next/image"
+import formatPrice from "@/util/PriceFormat"
+import { ProductType } from "@/types/ProductType"
+import Link from "next/link"
 
 export default function Product({
   name,
@@ -11,7 +11,8 @@ export default function Product({
   description,
   metadata,
 }: ProductType) {
-  const { features } = metadata;
+  const { features } = metadata
+
   return (
     <Link
       href={{
@@ -19,22 +20,22 @@ export default function Product({
         query: { name, image, unit_amount, id, description, features },
       }}
     >
-      <div className="text-gray-700">
+      <div>
         <Image
           src={image}
           alt={name}
-          width={400}
-          height={400}
-          className="object-cov rounded-lg"
+          width={800}
+          height={800}
+          className="w-full h-96 object-cover rounded-lg"
+          priority={true}
         />
         <div className="font-medium py-2">
           <h1>{name}</h1>
-          <h2 className="text-sm text-teal-700">
-            {" "}
-            {unit_amount !== null ? formatPrice(unit_amount) : "N/A"}{" "}
+          <h2 className="text-sm text-primary">
+            {unit_amount !== null ? formatPrice(unit_amount) : "N/A"}
           </h2>
         </div>
       </div>
     </Link>
-  );
+  )
 }
