@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Roboto, Lobster_Two } from "next/font/google";
+import { Roboto, Lobster_Two, VT323 } from "next/font/google";
 import Nav from "./components/Nav";
 import Hydrate from "./components/Hydrate";
 //Define main font
@@ -13,6 +13,11 @@ const lobster = Lobster_Two({
   subsets: ["latin"],
   variable: "--font-lobster",
 });
+const vt323 = VT323({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-vt323",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -25,7 +30,10 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={`${roboto.variable} ${lobster.variable}  `} lang="en">
+    <html
+      className={`${roboto.variable} ${lobster.variable} ${vt323.variable}  `}
+      lang="en"
+    >
       <Hydrate>
         <Nav />
         {children}

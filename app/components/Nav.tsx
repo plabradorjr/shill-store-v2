@@ -18,8 +18,8 @@ export default function Nav() {
     <nav className="flex justify-between items-center py-12">
       <Link href={"/"}>
         <div className="flex">
-          <h1 className="rotate-90 text-6xl">🚀</h1>
-          <h1 className="font-lobster text-xl">Shill.lol</h1>
+          <h1 className="rotate-90 text-4xl">🚀</h1>
+          <h1 className="font-vt323 text-3xl text-teal-500 pl-2">Shill.lol</h1>
         </div>
       </Link>
       <ul className="flex items-center gap-8">
