@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { useCartStore } from "@/store"
-import formatPrice from "@/util/PriceFormat"
-import { IoAddCircle, IoRemoveCircle } from "react-icons/io5"
-import basket from "@/public/basket.png"
-import { motion, AnimatePresence } from "framer-motion"
-import Checkout from "./Checkout"
-import OrderConfirmed from "./OrderConfirmed"
+import Image from "next/image";
+import { useCartStore } from "@/store";
+import formatPrice from "@/util/PriceFormat";
+import { IoAddCircle, IoRemoveCircle } from "react-icons/io5";
+import basket from "@/public/basket.png";
+import { motion, AnimatePresence } from "framer-motion";
+import Checkout from "./Checkout";
+import OrderConfirmed from "./OrderConfirmed";
 
 export default function Cart() {
-  const cartStore = useCartStore()
+  const cartStore = useCartStore();
 
   //Total Price
   const totalPrice = cartStore.cart.reduce((acc, item) => {
-    return acc + item.unit_amount! * item.quantity!
-  }, 0)
+    return acc + item.unit_amount! * item.quantity!;
+  }, 0);
 
   return (
     <motion.div
@@ -23,7 +23,7 @@ export default function Cart() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={() => cartStore.toggleCart()}
-      className="fixed w-full h-screen left-0 top-0 bg-black/25"
+      className="fixed w-full h-screen left-0 top-0 bg-black/25 z-20"
     >
       {/* Cart */}
       <motion.div
@@ -134,5 +134,5 @@ export default function Cart() {
         </AnimatePresence>
       </motion.div>
     </motion.div>
-  )
+  );
 }

@@ -1,9 +1,4 @@
-import Product from "./components/Product";
-import getProducts from "@/util/getProducts";
-
-export default async function Home() {
-  const products = await getProducts();
-
+export default function Sandbox() {
   return (
     <>
       {/* Hero Section */}
@@ -15,8 +10,8 @@ export default async function Home() {
         >
           <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
         </div>
-        <div className="mx-auto max-w-2xl py-24 sm:py-48 lg:py-24">
-          {/* <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div> */}
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Degen Swegs
@@ -46,12 +41,6 @@ export default async function Home() {
         >
           <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"></div>
         </div>
-      </div>
-      {/* PRODUCTS SECTION */}
-      <div className="grid grid-cols-fluid gap-12 p-20">
-        {products.map((product) => (
-          <Product {...product} key={product.id} />
-        ))}
       </div>
     </>
   );

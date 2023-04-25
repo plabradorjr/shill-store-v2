@@ -15,11 +15,11 @@ export default function Nav() {
   const { data: session, status } = useSession();
 
   return (
-    <nav className="flex justify-between items-center py-12">
+    <nav className="flex justify-between items-center py-5 lg:px-48 md:px-3">
       <Link href={"/"}>
         <div className="flex">
           <h1 className="rotate-90 text-4xl">🚀</h1>
-          <h1 className="font-vt323 text-3xl text-teal-500 pl-2">Shill.lol</h1>
+          <p className="font-bold text-2xl text-white">Shill.lol</p>
         </div>
       </Link>
       <ul className="flex items-center gap-8">
@@ -43,7 +43,6 @@ export default function Nav() {
           </AnimatePresence>
         </li>
         {/* {Dark Mode} */}
-        <DarkLight />
         {/* If the user is not signed in */}
         {!session?.user && (
           <li className="bg-primary text-white py-2 px-4 rounded-md">
