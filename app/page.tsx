@@ -19,17 +19,17 @@ export default async function Home() {
           {/* <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div> */}
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Degen Swegs
+              Degen Swegs.
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Faith loves irony, we all poor again
+              Cuz your fashion style is shit.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
                 className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
               >
-                Buy now
+                Don't buy now
               </a>
               <a
                 href="#"
