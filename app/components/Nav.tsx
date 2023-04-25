@@ -17,7 +17,10 @@ export default function Nav() {
   return (
     <nav className="flex justify-between items-center py-12">
       <Link href={"/"}>
-        <h1 className="font-lobster text-xl">Shill.lol</h1>
+        <div className="flex">
+          <h1 className="rotate-90 text-6xl">🚀</h1>
+          <h1 className="font-lobster text-xl">Shill.lol</h1>
+        </div>
       </Link>
       <ul className="flex items-center gap-8">
         {/* Toggle the cart */}
