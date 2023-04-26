@@ -47,11 +47,33 @@ export default async function Home() {
           <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"></div>
         </div>
       </div>
-      {/* PRODUCTS SECTION */}
-      <div className="grid grid-cols-fluid gap-12 p-20">
-        {products.map((product) => (
-          <Product {...product} key={product.id} />
-        ))}
+
+      {/* Images */}
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-10 p-10">
+        <div className="flex flex-col 2xl:flex-row items-center justify-between gap-16 rotate-6 mx-auto lg:w-72 md:w-64 sm:w-40">
+          <img
+            className="rounded-lg"
+            src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+          />
+        </div>
+        <div className="flex flex-col 2xl:flex-row items-center justify-between gap-16 mx-auto lg:w-72 md:w-64 sm:w-40">
+          <img
+            className="rounded-lg"
+            src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+          />
+        </div>
+        <div className="flex flex-col 2xl:flex-row items-center justify-between gap-16 -rotate-3 mx-auto lg:w-72 md:w-64 sm:w-40">
+          <img
+            className="rounded-lg"
+            src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+          />
+        </div>
+        <div className="flex flex-col 2xl:flex-row items-center justify-between gap-16 -rotate-3 mx-auto lg:w-72 md:w-64 sm:w-40">
+          <img
+            className="rounded-lg"
+            src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+          />
+        </div>
       </div>
     </>
   );
