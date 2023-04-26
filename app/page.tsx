@@ -1,9 +1,4 @@
-import Product from "./components/Product";
-import getProducts from "@/util/getProducts";
-
-export default async function Home() {
-  const products = await getProducts();
-
+export default function Home() {
   return (
     <>
       {/* Hero Section */}
@@ -16,10 +11,9 @@ export default async function Home() {
           <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
         </div>
         <div className="mx-auto max-w-2xl py-24 sm:py-48 lg:py-24">
-          {/* <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div> */}
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Degen Swegs.
+            <h1 className="lg:text-6xl font-bold tracking-tight text-white text-5xl">
+              Degenerate Swegs
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Cuz your fashion style is shit.
@@ -47,7 +41,6 @@ export default async function Home() {
           <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"></div>
         </div>
       </div>
-
       {/* Images */}
       <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-10 p-10">
         <div className="hidden md:block flex-col items-center justify-between gap-16 -rotate-6 mx-auto lg:w-72 md:w-80">
@@ -73,6 +66,28 @@ export default async function Home() {
             className="rounded-lg"
             src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
           />
+        </div>
+      </div>
+      {/* PROOF OF SWEG */}
+      <div className="bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
+        <div className="mx-auto center max-w-2xl text-center">
+          <h2 className="text-4xl font-bold tracking-tight text-white">
+            Don't flirt with him
+          </h2>
+          <p className="p-2">Don't.</p>
+        </div>
+        <div className="flex items-center justify-center">
+          <blockquote className="twitter-tweet">
+            <p lang="qme" dir="ltr">
+              🧐{" "}
+              <a href="https://t.co/SStQXHo1jZ">pic.twitter.com/SStQXHo1jZ</a>
+            </p>
+            &mdash; joseph.eth (@josephdelong){" "}
+            <a href="https://twitter.com/josephdelong/status/1484439237847965696?ref_src=twsrc%5Etfw">
+              January 21, 2022
+            </a>
+          </blockquote>{" "}
+          <script async src="https://platform.twitter.com/widgets.js"></script>
         </div>
       </div>
     </>
