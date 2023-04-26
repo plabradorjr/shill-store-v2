@@ -50,25 +50,25 @@ export default async function Home() {
 
       {/* Images */}
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-10 p-10">
-        <div className="flex flex-col 2xl:flex-row items-center justify-between gap-16 rotate-6 mx-auto lg:w-72 md:w-64 sm:w-40">
+        <div className="flex flex-col 2xl:flex-row items-center justify-between gap-16 -rotate-6 mx-auto lg:w-72 md:w-64 sm:w-40">
           <img
             className="rounded-lg"
             src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
           />
         </div>
-        <div className="flex flex-col 2xl:flex-row items-center justify-between gap-16 mx-auto lg:w-72 md:w-64 sm:w-40">
+        <div className="flex flex-col 2xl:flex-row items-center justify-between gap-16 rotate-12 mx-auto lg:w-72 md:w-64 sm:w-40">
           <img
             className="rounded-lg"
             src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
           />
         </div>
-        <div className="flex flex-col 2xl:flex-row items-center justify-between gap-16 -rotate-3 mx-auto lg:w-72 md:w-64 sm:w-40">
+        <div className="flex flex-col 2xl:flex-row items-center justify-between gap-16 -rotate-6 mx-auto lg:w-72 md:w-64 sm:w-40">
           <img
             className="rounded-lg"
             src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
           />
         </div>
-        <div className="flex flex-col 2xl:flex-row items-center justify-between gap-16 -rotate-3 mx-auto lg:w-72 md:w-64 sm:w-40">
+        <div className="flex flex-col 2xl:flex-row items-center justify-between gap-16 rotate-3 mx-auto lg:w-72 md:w-64 sm:w-40">
           <img
             className="rounded-lg"
             src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
