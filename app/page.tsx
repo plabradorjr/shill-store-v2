@@ -1,3 +1,9 @@
+import Image from "next/image";
+import bootyBae from "@/public/models/bootyBae.jpg";
+import carlosBae from "@/public/models/carlosBae.jpg";
+import ethBae from "@/public/models/ethBae.jpg";
+import ethChad from "@/public/models/ethChad.jpg";
+
 export default function Home() {
   return (
     <>
@@ -42,39 +48,27 @@ export default function Home() {
         </div>
       </div>
       {/* Images */}
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-10 p-10">
-        <div className="hidden md:block flex-col items-center justify-between gap-16 -rotate-6 mx-auto lg:w-72 md:w-80">
-          <img
-            className="rounded-lg"
-            src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
-          />
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 p-10 lg:px-64">
+        <div className="hidden md:block flex-col items-center justify-between gap-16 -rotate-6 mx-auto lg:w-80 md:w-80">
+          <Image className="rounded-lg" src={carlosBae} alt="booty bae shirt" />
         </div>
-        <div className="w-72 flex-col items-center justify-between gap-16 rotate-12 mx-auto lg:w-72 md:w-80">
-          <img
-            className="rounded-lg"
-            src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
-          />
+        <div className="w-72 flex-col items-center justify-between gap-16 rotate-12 mx-auto lg:w-80 md:w-80">
+          <Image className="rounded-lg" alt="ETH Bae" src={ethChad} />
         </div>
-        <div className="w-72 flex-col items-center justify-between gap-16 -rotate-6 mx-auto lg:w-72 md:w-80">
-          <img
-            className="rounded-lg"
-            src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
-          />
+        <div className="w-72 flex-col items-center justify-between gap-16 -rotate-6 mx-auto lg:w-80 md:w-80">
+          <Image className="rounded-lg" alt="ETH Chad" src={bootyBae} />
         </div>
-        <div className="hidden md:block flex-col items-center justify-between gap-16 rotate-3 mx-auto lg:w-72 md:w-80">
-          <img
-            className="rounded-lg"
-            src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
-          />
+        <div className="hidden md:block flex-col items-center justify-between gap-16 rotate-3 mx-auto lg:w-80 md:w-80">
+          <Image className="rounded-lg" alt="Carlos Bae" src={ethBae} />
         </div>
       </div>
       {/* PROOF OF SWEG */}
       <div className="bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
         <div className="mx-auto center max-w-2xl text-center">
           <h2 className="text-4xl font-bold tracking-tight text-white">
-            Don't flirt with him
+            Dont flirt with him
           </h2>
-          <p className="p-2">Don't.</p>
+          <p className="p-2">Proof of sweg iNtEnSiFiEs</p>
         </div>
         <div className="flex items-center justify-center">
           <blockquote className="twitter-tweet">
