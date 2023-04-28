@@ -1,41 +1,46 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js"
-import formatPrice from "@/util/PriceFormat"
-import { useCartStore } from "@/store"
+import { useState, useEffect } from "react";
+import {
+  PaymentElement,
+  useStripe,
+  useElements,
+} from "@stripe/react-stripe-js";
+import formatPrice from "@/util/PriceFormat";
+import { useCartStore } from "@/store";
+import AddressForm from "./AddressForm";
 
 export default function CheckoutForm({
   clientSecret,
 }: {
-  clientSecret: string
+  clientSecret: string;
 }) {
-  const stripe = useStripe()
-  const elements = useElements()
-  const [isLoading, setIsLoading] = useState(false)
+  const stripe = useStripe();
+  const elements = useElements();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const cartStore = useCartStore()
+  const cartStore = useCartStore();
 
   const totalPrice = cartStore.cart.reduce((acc, item) => {
-    return acc + item.unit_amount! * item.quantity!
-  }, 0)
-  const formattedPrice = formatPrice(totalPrice)
+    return acc + item.unit_amount! * item.quantity!;
+  }, 0);
+  const formattedPrice = formatPrice(totalPrice);
 
   useEffect(() => {
     if (!stripe) {
-      return
+      return;
     }
     if (!clientSecret) {
-      return
+      return;
     }
-  }, [stripe])
+  }, [stripe]);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     if (!stripe || !elements) {
-      return
+      return;
     }
-    setIsLoading(true)
+    setIsLoading(true);
 
     stripe
       .confirmPayment({
@@ -44,16 +49,22 @@ export default function CheckoutForm({
       })
       .then((result) => {
         if (!result.error) {
-          cartStore.setCheckout("success")
+          cartStore.setCheckout("success");
         }
-        setIsLoading(false)
-      })
-  }
+        setIsLoading(false);
+      });
+  };
 
   return (
     <form onSubmit={handleSubmit} id="payment-form">
+      <AddressForm />
+      <h1 className="pt-5 text-lg font-bold">Payment information</h1>
+      <h1 className="pb-2 text-xs">(Powered by Stripe)</h1>
       <PaymentElement id="payment-element" options={{ layout: "tabs" }} />
-      <h1 className="py-4 text-sm font-bold ">Total: {formattedPrice}</h1>
+      <h1 className="py-4 text-sm font-bold text-green-500 ">
+        Total: {formattedPrice}
+      </h1>
+
       <button
         className={`py-2 mt-4  w-full bg-primary rounded-md text-white disabled:opacity-25`}
         id="submit"
@@ -64,5 +75,5 @@ export default function CheckoutForm({
         </span>
       </button>
     </form>
-  )
+  );
 }

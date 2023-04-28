@@ -42,7 +42,7 @@ export default function Nav() {
             )}
           </AnimatePresence>
         </li>
-        {/* {Dark Mode} */}
+        {/* DARK MODE INSET HERE */}
         {/* If the user is not signed in */}
         {!session?.user && (
           <li className="bg-primary text-white py-2 px-4 rounded-md">
