@@ -29,14 +29,14 @@ model Order {
     createdDate     DateTime  @default(now())
     paymentIntentID String?   @unique
     products        Product[]
-    firstName       String
-    lastName        String
-    country         String
-    address         String
-    aptSuiteEtc     String
-    city            String
-    state           String
-    zipCode         String
+    firstName       String?
+    lastName        String?
+    country         String?
+    address         String?
+    aptSuiteEtc     String?
+    city            String?
+    state           String?
+    zipCode         String?
 }
 
 model Product {
