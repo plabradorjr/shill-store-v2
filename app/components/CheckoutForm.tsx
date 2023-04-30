@@ -34,8 +34,45 @@ export default function CheckoutForm({
     }
   }, [stripe]);
 
+  const [shippingInfo, setShippingInfo] = useState({
+    firstName: "",
+    lastName: "",
+    country: "",
+    address: "",
+    apartment: "",
+    city: "",
+    state: "",
+    zipCode: "",
+  });
+
+  const handleInputChange = (event: any) => {
+    const { name, value } = event.target;
+    setShippingInfo({ ...shippingInfo, [name]: value });
+  };
+
+  const paymentIntentID = cartStore.paymentIntent;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // UPDATE shipping address upon submit
+    try {
+      const response = await fetch("/api/update-order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          paymentIntentID,
+          ...shippingInfo,
+        }),
+      });
+      const data = await response.json();
+      console.log(data);
+    } catch (err) {
+      console.error(err);
+    }
+
+    // Handle STRIPE payment
     if (!stripe || !elements) {
       return;
     }
@@ -52,22 +89,6 @@ export default function CheckoutForm({
         }
         setIsLoading(false);
       });
-  };
-
-  const [shippingInfo, setShippingInfo] = useState({
-    firstName: "",
-    lastName: "",
-    country: "",
-    address: "",
-    apartment: "",
-    city: "",
-    state: "",
-    zipCode: "",
-  });
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setShippingInfo({ ...shippingInfo, [name]: value });
   };
 
   return (
