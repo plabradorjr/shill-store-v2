@@ -9,7 +9,7 @@ export default async function getProducts() {
   const productWithPrices = await Promise.all(
     products.data.map(async (product) => {
       const prices = await stripe.prices.list({ product: product.id });
-      const features = product.metadata.size || ""; // Extract features from metadata
+      const size = product.metadata.size || ""; // Extract features from metadata
       console.log(product);
       return {
         id: product.id,
@@ -18,7 +18,7 @@ export default async function getProducts() {
         image: product.images[0],
         currency: prices.data[0].currency,
         description: product.description,
-        metadata: { features },
+        metadata: { size },
       };
     })
   );

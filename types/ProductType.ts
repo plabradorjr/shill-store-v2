@@ -9,5 +9,5 @@ export type ProductType = {
 };
 
 type MetadataType = {
-  features: string;
+  size: string;
 };
