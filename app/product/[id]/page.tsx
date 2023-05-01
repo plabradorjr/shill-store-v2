@@ -24,6 +24,7 @@ export default async function Product({ searchParams }: SearchParamTypes) {
             {searchParams.unit_amount && formatPrice(searchParams.unit_amount)}
           </p>
         </div>
+        {/* add choose size button here */}
         <AddCart {...searchParams} />
       </div>
     </div>

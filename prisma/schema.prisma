@@ -37,6 +37,7 @@ model Order {
     city            String?
     state           String?
     zipCode         String?
+    trackingNumber  String?
 }
 
 model Product {
