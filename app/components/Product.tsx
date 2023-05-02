@@ -27,6 +27,7 @@ export default function Product({
         />
         <div className="font-medium py-2">
           <h1>{name}</h1>
+          <p className="text-sm">size: {size}</p>
           <h2 className="text-sm text-primary">
             {unit_amount !== null ? formatPrice(unit_amount) : "N/A"}
           </h2>

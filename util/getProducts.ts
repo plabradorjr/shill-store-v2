@@ -10,7 +10,7 @@ export default async function getProducts() {
     products.data.map(async (product) => {
       const prices = await stripe.prices.list({ product: product.id });
       const size = product.metadata.size || ""; // Extract features from metadata
-      console.log(product);
+
       return {
         id: product.id,
         name: product.name,

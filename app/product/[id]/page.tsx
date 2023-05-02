@@ -2,12 +2,48 @@ import Image from "next/image";
 import { SearchParamTypes } from "@/types/SearchParamTypes";
 import formatPrice from "@/util/PriceFormat";
 import AddCart from "./AddCart";
+import getProducts from "@/util/getProducts";
+import Link from "next/link";
 
 export default async function Product({ searchParams }: SearchParamTypes) {
   const currentSize = searchParams.size;
+  const currentName = searchParams.name;
 
-  const getClassName = (size: string) => {
-    return currentSize === size ? "btn btn-primary" : "btn btn-outline";
+  const products = await getProducts();
+
+  const getClassName = (size) => {
+    return currentSize === size
+      ? "btn btn-primary w-full"
+      : "btn btn-outline w-full";
+  };
+
+  const findProductURL = (s) => {
+    const product = Object.values(products).find(
+      (p) => p.name === currentName && p.metadata.size === s
+    );
+
+    if (!product) {
+      return {
+        href: "/",
+        as: "/",
+        disabled: true,
+      };
+    }
+
+    const { id, name, image, description, unit_amount } = product;
+    const size = product.metadata.size;
+
+    const href = {
+      pathname: "/product/[id]",
+      query: { name, image, unit_amount, id, description, size },
+    };
+
+    const as = {
+      pathname: `/product/${id}`,
+      query: { name, image, unit_amount, id, description, size },
+    };
+
+    return { href, as, disabled: false };
   };
 
   return (
@@ -24,14 +60,28 @@ export default async function Product({ searchParams }: SearchParamTypes) {
       <div className="font-medium ">
         <h1 className="text-2xl  py-2">{searchParams.name}</h1>
         <p className="py-2">{searchParams.description}</p>
-        <div className="grid grid-cols-4 gap-2">
-          <button className={getClassName("small")}>Small</button>
-          <button className={getClassName("medium")}>Medium</button>
-          <button className={getClassName("large")}>Large</button>
-          <button className={getClassName("x-large")}>X-Large</button>
+        <div className="grid grid-cols-4 gap-3">
+          {["small", "medium", "large", "xlarge"].map((size) => {
+            const { href, as, disabled } = findProductURL(size);
+            const button = (
+              <button className={getClassName(size)} disabled={disabled}>
+                <span>{size}</span>
+              </button>
+            );
+
+            return disabled ? (
+              <div key={size} className="">
+                {button}
+              </div>
+            ) : (
+              <Link key={size} href={href} as={as} className="">
+                {button}
+              </Link>
+            );
+          })}
         </div>
 
-        <p className="py-2">{searchParams.size}</p>
+        <p className="py-2">Size: {searchParams.size}</p>
         <div className="flex gap-2">
           <p className="font-bold text-primary">
             {searchParams.unit_amount && formatPrice(searchParams.unit_amount)}
