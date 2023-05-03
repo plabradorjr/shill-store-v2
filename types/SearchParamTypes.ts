@@ -9,6 +9,7 @@ type SearchParams = {
   id: string;
   description: string | null;
   size: string;
+  tagNumber: string;
 };
 
 export type SearchParamTypes = {

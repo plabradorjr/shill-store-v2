@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default async function Product({ searchParams }: SearchParamTypes) {
   const currentSize = searchParams.size;
-  const currentName = searchParams.name;
+  const currentTagNumber = searchParams.tagNumber;
 
   const products = await getProducts();
 
@@ -19,7 +19,7 @@ export default async function Product({ searchParams }: SearchParamTypes) {
 
   const findProductURL = (s) => {
     const product = Object.values(products).find(
-      (p) => p.name === currentName && p.metadata.size === s
+      (p) => p.metadata.tagNumber === currentTagNumber && p.metadata.size === s
     );
 
     if (!product) {
@@ -32,22 +32,23 @@ export default async function Product({ searchParams }: SearchParamTypes) {
 
     const { id, name, image, description, unit_amount } = product;
     const size = product.metadata.size;
+    const tagNumber = product.metadata.tagNumber;
 
     const href = {
       pathname: "/product/[id]",
-      query: { name, image, unit_amount, id, description, size },
+      query: { name, image, unit_amount, id, description, size, tagNumber },
     };
 
     const as = {
       pathname: `/product/${id}`,
-      query: { name, image, unit_amount, id, description, size },
+      query: { name, image, unit_amount, id, description, size, tagNumber },
     };
 
     return { href, as, disabled: false };
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-between px-5 gap-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 items-top justify-between lg:px-52 md:px-5 px-3 gap-5">
       <Image
         src={searchParams.image}
         alt={searchParams.name}
@@ -70,7 +71,7 @@ export default async function Product({ searchParams }: SearchParamTypes) {
             );
 
             return disabled ? (
-              <div key={size} className="">
+              <div key={size} className="cursor-not-allowed">
                 {button}
               </div>
             ) : (

@@ -11,12 +11,13 @@ export default function Product({
   metadata,
 }: ProductType) {
   const size = metadata.size;
+  const tagNumber = metadata.tagNumber;
 
   return (
     <Link
       href={{
         pathname: `/product/${id}`,
-        query: { name, image, unit_amount, id, description, size },
+        query: { name, image, unit_amount, id, description, size, tagNumber },
       }}
     >
       <div>
