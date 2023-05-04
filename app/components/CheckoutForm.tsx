@@ -68,27 +68,27 @@ export default function CheckoutForm({
       });
       const data = await response.json();
       console.log(data);
+
+      // Handle STRIPE payment
+      if (!stripe || !elements) {
+        return;
+      }
+      setIsLoading(true);
+
+      stripe
+        .confirmPayment({
+          elements,
+          redirect: "if_required",
+        })
+        .then((result) => {
+          if (!result.error) {
+            cartStore.setCheckout("success");
+          }
+          setIsLoading(false);
+        });
     } catch (err) {
       console.error(err);
     }
-
-    // Handle STRIPE payment
-    if (!stripe || !elements) {
-      return;
-    }
-    setIsLoading(true);
-
-    stripe
-      .confirmPayment({
-        elements,
-        redirect: "if_required",
-      })
-      .then((result) => {
-        if (!result.error) {
-          cartStore.setCheckout("success");
-        }
-        setIsLoading(false);
-      });
   };
 
   return (
