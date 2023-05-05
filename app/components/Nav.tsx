@@ -15,7 +15,7 @@ export default function Nav() {
   const { data: session, status } = useSession();
 
   return (
-    <nav className="flex justify-between items-center py-5 lg:px-48 md:px-3">
+    <nav className="flex justify-between items-center py-5 lg:px-48 px-5 bg-gray-900">
       <Link href={"/"}>
         <div className="flex">
           <h1 className="rotate-90 text-4xl">🚀</h1>

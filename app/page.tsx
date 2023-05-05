@@ -66,9 +66,9 @@ export default function Home() {
       <div className="bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
         <div className="mx-auto center max-w-2xl text-center">
           <h2 className="text-4xl font-bold tracking-tight text-white">
-            Dont flirt with him
+            Proof of Sweg
           </h2>
-          <p className="p-2">Proof of sweg iNtEnSiFiEs</p>
+          <p className="p-2">Don't flirt with him</p>
         </div>
         <div className="flex items-center justify-center">
           <blockquote className="twitter-tweet">
