@@ -19,10 +19,10 @@ export default function Home() {
         <div className="mx-auto max-w-2xl py-24 sm:py-48 lg:py-24">
           <div className="text-center">
             <h1 className="lg:text-6xl font-bold tracking-tight text-white text-5xl">
-              Degen Swegs
+              Shitcoin Swegs
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              you gonna make it?
+              Faith loves irony, we all poor again 😭
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
