@@ -48,8 +48,8 @@ export default function Home() {
         </div>
       </div>
       {/* Images */}
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 p-10 lg:px-64">
-        <div className="hidden md:block flex-col items-center justify-between gap-16 -rotate-6 mx-auto lg:w-80 md:w-80">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 p-10 lg:px-64 justify-center content-center self-center items-center">
+        <div className="w-72 flex-col items-center justify-between gap-16 -rotate-12 mx-auto lg:w-80 md:w-80">
           <Image className="rounded-lg" src={carlosBae} alt="booty bae shirt" />
         </div>
         <div className="w-72 flex-col items-center justify-between gap-16 rotate-12 mx-auto lg:w-80 md:w-80">
@@ -58,7 +58,7 @@ export default function Home() {
         <div className="w-72 flex-col items-center justify-between gap-16 -rotate-6 mx-auto lg:w-80 md:w-80">
           <Image className="rounded-lg" alt="ETH Chad" src={bootyBae} />
         </div>
-        <div className="hidden md:block flex-col items-center justify-between gap-16 rotate-3 mx-auto lg:w-80 md:w-80">
+        <div className="w-72 flex-col items-center justify-between gap-16 rotate-12 mx-auto lg:w-80 md:w-80">
           <Image className="rounded-lg" alt="Carlos Bae" src={ethBae} />
         </div>
       </div>
