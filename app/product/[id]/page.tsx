@@ -13,7 +13,7 @@ export default async function Product({ searchParams }: SearchParamTypes) {
 
   const getClassName = (size) => {
     return currentSize === size
-      ? "btn btn-primary w-full"
+      ? "btn btn-primary w-full hover:bg-indigo-400"
       : "btn btn-outline w-full";
   };
 
