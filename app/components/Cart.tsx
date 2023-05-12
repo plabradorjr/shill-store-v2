@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useCartStore } from "@/store";
 import formatPrice from "@/util/PriceFormat";
 import { IoAddCircle, IoRemoveCircle } from "react-icons/io5";
-import basket from "@/public/basket.png";
+import pepeRain from "@/public/pepeRain.gif";
 import { motion, AnimatePresence } from "framer-motion";
 import Checkout from "./Checkout";
 import OrderConfirmed from "./OrderConfirmed";
@@ -129,8 +129,8 @@ export default function Cart() {
               exit={{ scale: 0.5, rotateZ: -10, opacity: 0 }}
               className="flex flex-col items-center gap-12 text-2xl font-medium pt-56 opacity-75"
             >
-              <h1>Uhhh ohhh...it's empty 😢</h1>
-              <Image src={basket} alt="empty cart" width={200} height={200} />
+              <h1>Sad lyfe, your cart is empty.</h1>
+              <Image src={pepeRain} alt="empty cart" width={200} height={200} />
             </motion.div>
           )}
         </AnimatePresence>
