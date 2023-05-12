@@ -75,13 +75,13 @@ const navigation = {
 export default function Footer() {
   return (
     <footer className="bg-black">
-      <div className="px-6 py-5">
+      <div className="px-3 py-3">
         <nav
           className="columns-2 sm:flex sm:justify-center sm:space-x-12"
           aria-label="Footer"
         >
           {navigation.main.map((item) => (
-            <div key={item.name} className="pb-6">
+            <div key={item.name} className="pb-3 pt-3">
               <a
                 href={item.href}
                 className="text-sm leading-6 text-gray-600 hover:text-gray-200"
@@ -91,7 +91,7 @@ export default function Footer() {
             </div>
           ))}
         </nav>
-        <div className="mt-1 flex justify-center space-x-10">
+        <div className="flex justify-center space-x-10">
           {navigation.social.map((item) => (
             <a
               key={item.name}
@@ -99,11 +99,11 @@ export default function Footer() {
               className="text-gray-400 hover:text-gray-100"
             >
               <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
+              <item.icon className="w-6" aria-hidden="true" />
             </a>
           ))}
         </div>
-        <p className="mt-10 text-center text-xs leading-5 text-gray-500">
+        <p className="my-5 text-center text-xs leading-5 text-gray-500">
           &copy; {new Date().getFullYear()} Shill.Lol, Inc. All rights reserved.
         </p>
       </div>
