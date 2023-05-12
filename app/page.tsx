@@ -3,6 +3,7 @@ import bootyBae from "@/public/models/bootyBae.jpg";
 import carlosBae from "@/public/models/carlosBae.jpg";
 import ethBae from "@/public/models/ethBae.jpg";
 import ethChad from "@/public/models/ethChad.jpg";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -84,6 +85,7 @@ export default function Home() {
           <script async src="https://platform.twitter.com/widgets.js"></script>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
