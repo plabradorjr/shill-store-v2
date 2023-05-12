@@ -19,8 +19,8 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-2xl py-24 sm:py-48 lg:py-24">
           <div className="text-center">
-            <h1 className="lg:text-6xl font-bold tracking-tight text-white text-5xl">
-              Shitcoin Swegs
+            <h1 className="lg:text-5xl font-bold tracking-tight text-white text-3xl">
+              Devs Do Something Swegs
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Faith loves irony, we all poor again 😭

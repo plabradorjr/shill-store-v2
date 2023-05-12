@@ -20,8 +20,8 @@ const vt323 = VT323({
 });
 
 export const metadata = {
-  title: "Shill.lol",
-  description: "Notice me senpai",
+  title: "notice me senpai",
+  description: "Shill.lol store, the very best crypto swags in the universe",
 };
 
 export default async function RootLayout({
