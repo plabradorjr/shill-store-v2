@@ -4,20 +4,25 @@ import carlosBae from "@/public/models/carlosBae.jpg";
 import ethBae from "@/public/models/ethBae.jpg";
 import ethChad from "@/public/models/ethChad.jpg";
 import Footer from "./components/Footer";
+import rugChart from "@/public/rugChart.png";
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
       <div className="relative isolate overflow-hidden">
-        {/* <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply" alt="" className="absolute inset-0 -z-10 h-full w-full object-cover"> */}
+        <Image
+          src={rugChart}
+          alt="rug chart"
+          className="absolute inset-0 -z-10 object-right-top h-full w-full object-cover brightness-50"
+        />
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
         >
           <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
         </div>
-        <div className="mx-auto max-w-2xl py-24 sm:py-48 lg:py-24">
+        <div className="mx-auto max-w-2xl py-24 sm:py-48 lg:py-48">
           <div className="text-center">
             <h1 className="lg:text-5xl font-bold tracking-tight text-white text-3xl">
               Devs Do Something Swegs
@@ -49,7 +54,7 @@ export default function Home() {
         </div>
       </div>
       {/* Images */}
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 p-10 lg:px-64 justify-center content-center self-center items-center">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 py-24 lg:px-32 justify-center items-center">
         <div className="w-72 flex-col items-center justify-between gap-16 -rotate-12 mx-auto lg:w-80 md:w-80">
           <Image className="rounded-lg" src={carlosBae} alt="booty bae shirt" />
         </div>
