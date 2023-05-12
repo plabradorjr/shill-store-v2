@@ -85,7 +85,9 @@ export default function Home() {
           <script async src="https://platform.twitter.com/widgets.js"></script>
         </div>
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </>
   );
 }

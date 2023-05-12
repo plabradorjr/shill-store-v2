@@ -75,9 +75,9 @@ const navigation = {
 export default function Footer() {
   return (
     <footer className="bg-black">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-5 sm:py-5 lg:px-8">
         <nav
-          className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
+          className="columns-2 sm:flex sm:justify-center sm:space-x-12"
           aria-label="Footer"
         >
           {navigation.main.map((item) => (
@@ -91,7 +91,7 @@ export default function Footer() {
             </div>
           ))}
         </nav>
-        <div className="mt-10 flex justify-center space-x-10">
+        <div className="mt-1 flex justify-center space-x-10">
           {navigation.social.map((item) => (
             <a
               key={item.name}
