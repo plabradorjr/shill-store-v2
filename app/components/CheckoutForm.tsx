@@ -45,6 +45,18 @@ export default function CheckoutForm({
     zipCode: "",
   });
 
+  const isFormValid = () => {
+    const requiredFields = [
+      "firstName",
+      "country",
+      "address",
+      "city",
+      "state",
+      "zipCode",
+    ];
+    return requiredFields.every((field) => shippingInfo[field] !== "");
+  };
+
   const handleInputChange = (event: any) => {
     const { name, value } = event.target;
     setShippingInfo({ ...shippingInfo, [name]: value });
@@ -95,7 +107,8 @@ export default function CheckoutForm({
     <form onSubmit={handleSubmit} id="payment-form">
       {/* SHIPPING FORM */}
       <div>
-        <h1 className="py-4 text-lg font-bold">Shipping information</h1>
+        <h1 className="text-lg font-bold">Shipping information</h1>
+        <p className="pb-4 text-xs">(All fields are required before paying)</p>
         <div className="grid grid-cols-2">
           <input
             type="text"
@@ -104,6 +117,7 @@ export default function CheckoutForm({
             value={shippingInfo.firstName}
             className="input input-bordered mr-1 mb-4"
             onChange={handleInputChange}
+            required
           />
           <input
             type="text"
@@ -120,6 +134,7 @@ export default function CheckoutForm({
             value={shippingInfo.country}
             className="input input-bordered mr-1 mb-4"
             onChange={handleInputChange}
+            required
           />
         </div>
         <div className="grid grid-cols-1">
@@ -130,6 +145,7 @@ export default function CheckoutForm({
             value={shippingInfo.address}
             className="input input-bordered mb-4"
             onChange={handleInputChange}
+            required
           />
           <input
             type="text"
@@ -148,6 +164,7 @@ export default function CheckoutForm({
             value={shippingInfo.city}
             className="input input-bordered mr-1 mb-4"
             onChange={handleInputChange}
+            required
           />
           <input
             type="text"
@@ -156,6 +173,7 @@ export default function CheckoutForm({
             value={shippingInfo.state}
             className="input input-bordered ml-1 mb-4"
             onChange={handleInputChange}
+            required
           />
           <input
             type="text"
@@ -164,6 +182,7 @@ export default function CheckoutForm({
             value={shippingInfo.zipCode}
             className="input input-bordered mr-1 mb-4"
             onChange={handleInputChange}
+            required
           />
         </div>
       </div>
@@ -180,7 +199,7 @@ export default function CheckoutForm({
       <button
         className={`py-2 mt-4  w-full bg-primary rounded-md text-white disabled:opacity-25`}
         id="submit"
-        disabled={isLoading || !stripe || !elements}
+        disabled={!isFormValid() || isLoading || !stripe || !elements}
       >
         <span id="button-text">
           {isLoading ? <span>Processing 👀</span> : <span>Pay now 🔥</span>}
