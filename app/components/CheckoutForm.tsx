@@ -104,7 +104,7 @@ export default function CheckoutForm({
   };
 
   return (
-    <form onSubmit={handleSubmit} id="payment-form" className="pb-10">
+    <form onSubmit={handleSubmit} id="payment-form" className="pb-20">
       {/* SHIPPING FORM */}
       <div>
         <h1 className="text-lg font-bold">Shipping information</h1>
