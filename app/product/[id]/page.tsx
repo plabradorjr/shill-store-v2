@@ -17,6 +17,12 @@ export default async function Product({ searchParams }: SearchParamTypes) {
       : "btn btn-outline w-full";
   };
 
+  const currentProduct = Object.values(products).find(
+    (p) =>
+      p.metadata.tagNumber === currentTagNumber &&
+      p.metadata.size === currentSize
+  );
+
   const findProductURL = (s) => {
     const product = Object.values(products).find(
       (p) => p.metadata.tagNumber === currentTagNumber && p.metadata.size === s
@@ -60,7 +66,7 @@ export default async function Product({ searchParams }: SearchParamTypes) {
 
       <div className="font-medium ">
         <h1 className="text-2xl  py-2">{searchParams.name}</h1>
-        <p className="py-5 text-xs">{searchParams.description}</p>
+        <p className="py-5 text-xs">{currentProduct?.description}</p>
         <div className="grid grid-cols-4 gap-3">
           {["small", "medium", "large", "xlarge"].map((size) => {
             const { href, as, disabled } = findProductURL(size);
@@ -82,13 +88,22 @@ export default async function Product({ searchParams }: SearchParamTypes) {
           })}
         </div>
 
-        <div className="flex gap-2">
-          <p className="font-bold text-teal-500 pt-5">
+        <div className="grid ">
+          <p className="text-orange-200 pt-5 text-xs">
+            {currentProduct?.metadata.inStockAmount} left in stock (updated
+            daily)
+          </p>
+          <p className="font-bold text-teal-500 pt-3">
             {searchParams.unit_amount && formatPrice(searchParams.unit_amount)}
           </p>
         </div>
-        {/* add choose size button here */}
-        <AddCart {...searchParams} />
+        {currentProduct?.metadata.inStockAmount === "0" ? (
+          <button className="btn no-animation w-full my-4 text-red-300">
+            Sorry, this item is out of stock{" "}
+          </button>
+        ) : (
+          <AddCart {...searchParams} />
+        )}
       </div>
     </div>
   );

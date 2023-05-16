@@ -12,6 +12,7 @@ export default async function handler(req: any, res: any) {
       city,
       state,
       zipCode,
+      ethAddress,
     } = req.body;
 
     try {
@@ -26,6 +27,7 @@ export default async function handler(req: any, res: any) {
           city,
           state,
           zipCode,
+          ethAddress,
         },
       });
 

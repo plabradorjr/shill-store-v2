@@ -43,6 +43,7 @@ export default function CheckoutForm({
     city: "",
     state: "",
     zipCode: "",
+    ethAddress: "",
   });
 
   const isFormValid = () => {
@@ -53,6 +54,7 @@ export default function CheckoutForm({
       "city",
       "state",
       "zipCode",
+      "ethAddress",
     ];
     return requiredFields.every((field) => shippingInfo[field] !== "");
   };
@@ -184,6 +186,20 @@ export default function CheckoutForm({
             onChange={handleInputChange}
             required
           />
+        </div>
+        <div className="grid grid-cols-1">
+          <input
+            type="text"
+            placeholder="Your Ethereum wallet address"
+            name="ethAddress"
+            value={shippingInfo.ethAddress}
+            className="input input-bordered input-secondary mr-1 mb-1"
+            onChange={handleInputChange}
+            required
+          />
+          <p className="text-xs text-pink-500 ml-1">
+            Airdrop will be on Arbitrum network, not mainnet.
+          </p>
         </div>
       </div>
 

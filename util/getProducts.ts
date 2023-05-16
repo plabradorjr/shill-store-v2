@@ -11,6 +11,7 @@ export default async function getProducts() {
       const prices = await stripe.prices.list({ product: product.id });
       const size = product.metadata.size || ""; // Extract features from metadata
       const tagNumber = product.metadata.tagNumber || ""; // Extract features from metadata
+      const inStockAmount = product.metadata.inStockAmount || ""; // Extract features from metadata
 
       return {
         id: product.id,
@@ -19,7 +20,7 @@ export default async function getProducts() {
         image: product.images[0],
         currency: prices.data[0].currency,
         description: product.description,
-        metadata: { size, tagNumber },
+        metadata: { size, tagNumber, inStockAmount },
       };
     })
   );

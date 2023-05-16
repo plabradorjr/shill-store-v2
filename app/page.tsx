@@ -25,11 +25,14 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-2xl py-24 sm:py-48 lg:py-48">
           <div className="text-center">
+            <h1 className="lg:text-5xl font-bold tracking-tight text-white text-3xl mb-2">
+              Limited Edition
+            </h1>
             <h1 className="lg:text-5xl font-bold tracking-tight text-white text-3xl">
-              Shitcoin Swegs
+              Shitcoin Fashun
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Faith loves irony, we all poor again 😭
+              Free NFT airdrop for every order
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
@@ -55,6 +58,12 @@ export default function Home() {
         </div>
       </div>
       {/* Images */}
+      <p className="mt-8 text-3xl font-bold tracking-tight text-white text-center">
+        Shop the best crypto swags in the world
+      </p>
+      <p className="mt-6 text-lg leading-8 text-gray-300 text-center">
+        Faith loves irony, we all poor again 😭
+      </p>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 py-24 lg:px-32 justify-center items-center">
         <div className="w-72 flex-col items-center justify-between gap-16 -rotate-12 mx-auto lg:w-80 md:w-80 cursor-not-allowed">
           <Image className="rounded-lg" src={carlosBae} alt="booty bae shirt" />
@@ -78,7 +87,7 @@ export default function Home() {
       {/* PROOF OF SWEG */}
       <div className="bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
         <div className="mx-auto center max-w-2xl text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-white">
+          <h2 className="text-3xl font-bold tracking-tight text-white">
             Proof of Sweg
           </h2>
           <p className="p-2">Don't flirt with him</p>
