@@ -32,7 +32,7 @@ export default function Home() {
               Shitcoin Fashun
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Free NFT airdrop for every order
+              Free NFT airdrop for every purchase
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
@@ -58,11 +58,11 @@ export default function Home() {
         </div>
       </div>
       {/* Images */}
-      <p className="mt-8 text-3xl font-bold tracking-tight text-white text-center">
-        Shop the best crypto swags in the world
+      <p className="mt-8 text-2xl font-bold tracking-tight text-white text-center lg:text-3xl">
+        Wear the best crypto swags in the world
       </p>
-      <p className="mt-6 text-lg leading-8 text-gray-300 text-center">
-        Faith loves irony, we all poor again 😭
+      <p className="mt-6 text-lg leading-8 text-gray-300 text-center italic">
+        "Fashion changes, swagger lasts forever" -- some pepe maxi chad
       </p>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 py-24 lg:px-32 justify-center items-center">
         <div className="w-72 flex-col items-center justify-between gap-16 -rotate-12 mx-auto lg:w-80 md:w-80 cursor-not-allowed">
