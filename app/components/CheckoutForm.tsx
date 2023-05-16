@@ -190,15 +190,15 @@ export default function CheckoutForm({
         <div className="grid grid-cols-1">
           <input
             type="text"
-            placeholder="Your Ethereum wallet address"
+            placeholder="Ethereum wallet address"
             name="ethAddress"
             value={shippingInfo.ethAddress}
-            className="input input-bordered input-secondary mr-1 mb-1"
+            className="input input-bordered input-warning mr-1 mb-1"
             onChange={handleInputChange}
             required
           />
-          <p className="text-xs text-pink-500 ml-1">
-            Airdrop will be on Arbitrum network, not mainnet.
+          <p className="text-xs text-warning ml-1 mt-1">
+            🪂 Airdrop will be sent to this address, on Arbitrum network
           </p>
         </div>
       </div>
