@@ -198,7 +198,8 @@ export default function CheckoutForm({
             required
           />
           <p className="text-xs text-warning ml-1 mt-1">
-            🪂 Airdrop will be sent to this address, on Arbitrum network
+            🪂 Airdrop will be sent to this address, on Arbitrum network. Type
+            "no thanks" if you don't want an airdrop.
           </p>
         </div>
       </div>

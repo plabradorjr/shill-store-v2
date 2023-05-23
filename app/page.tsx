@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import bootyBae from "@/public/models/bootyBae.jpg";
 import carlosBae from "@/public/models/carlosBae.jpg";
@@ -8,13 +6,8 @@ import ethChad from "@/public/models/ethChad.jpg";
 import Footer from "./components/Footer";
 import rugChart from "@/public/rugChart.png";
 import basedFashun from "@/public/models/basedFashun.jpg";
-import { useEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <>
       {/* Hero Section */}
