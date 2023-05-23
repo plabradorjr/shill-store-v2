@@ -56,7 +56,7 @@ export default async function Product({ searchParams }: SearchParamTypes) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 items-top justify-between lg:px-52 md:px-5 px-3 gap-5 py-7">
       <Image
-        src={searchParams.image}
+        src={currentProduct?.image}
         alt={searchParams.name}
         width={600}
         height={600}
