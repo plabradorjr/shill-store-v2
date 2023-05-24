@@ -1,7 +1,7 @@
 import Image from "next/image";
 import bootyBae from "@/public/models/bootyBae.jpg";
 import carlosBae from "@/public/models/carlosBae.jpg";
-import ethBae from "@/public/models/ethBae.jpg";
+import lilPudgyMaxBid from "@/public/models/lilPudgyMaxBid.png";
 import ethChad from "@/public/models/ethChad.jpg";
 import Footer from "./components/Footer";
 import rugChart from "@/public/rugChart.png";
@@ -70,7 +70,11 @@ export default function Home() {
 
       <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 py-24 lg:px-32 justify-center items-center">
         <div className="w-72 flex-col items-center justify-between gap-16 -rotate-12 mx-auto lg:w-80 md:w-80 cursor-not-allowed">
-          <Image className="rounded-lg" src={carlosBae} alt="booty bae shirt" />
+          <Image
+            className="rounded-lg"
+            src={lilPudgyMaxBid}
+            alt="Lil pudgy max bidding"
+          />
         </div>
         <a
           href="/product/prod_NlQIziy5JoxKGZ?name=ETH+Daddy+Sweg+-+medium&image=https%3A%2F%2Ffiles.stripe.com%2Flinks%2FMDB8YWNjdF8xRFJhY2tIdHB5elFOZ1pjfGZsX2xpdmVfTzVvb0pBbHBSc2RXZ3dwMnRXZnZnVFVw00WyhsHmXO&unit_amount=3700&id=prod_NlQIziy5JoxKGZ&description=You+are+gonna+make+it.+You+can%27t+fuck+this+one+up%2C+seriously%2C+not+possible.+Listen+up%2C+champ%2C+it%27s+time+for+a+fucking+make+over%2C+bitch.+Draw+some+positive+attention+toward+yourself+for+a+change+and+pamp+up+ETH.&size=medium&tagNumber=69"
