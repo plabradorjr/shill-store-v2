@@ -3,7 +3,7 @@ import lilPudgyMaxBid from "@/public/models/lilPudgyMaxBid.png";
 import ethChad from "@/public/models/ethChad.jpg";
 import Footer from "./components/Footer";
 import rugChart from "@/public/rugChart.png";
-import basedFashun2 from "@/public/models/basedFashun2.png";
+import basedFashun22 from "@/public/models/basedFashun22.png";
 import tubbyFullSendBae from "@/public/models/tubbyFullSendBae.png";
 
 export default function Home() {
@@ -98,7 +98,7 @@ export default function Home() {
           href="/product/prod_NtglYM48Pu6ezm?name=Based+Fashun+-+medium&image=https%3A%2F%2Ffiles.stripe.com%2Flinks%2FMDB8YWNjdF8xRFJhY2tIdHB5elFOZ1pjfGZsX2xpdmVfam5QWVJ3MURpZ2JlSUYzQ1hzbHdQUFRT00NfrSUdLQ&unit_amount=3700&id=prod_NtglYM48Pu6ezm&description=Pretend+you+don%27t+suck+at+trading+NFTs+and+well%2C+life.+Respect+the+pamp%2C+papi+senpai.+Based+season+will+soon+commence.+Btw%2C+this+shirt+is+using+Champion+Apparel%2C+so+your+wife%27s+boyfriend+will+be+happy&size=medium&tagNumber=691"
           className="w-72 flex-col items-center justify-between gap-16 rotate-12 mx-auto hover:rotate-0 md:w-80"
         >
-          <Image className="rounded-lg" alt="Carlos Bae" src={basedFashun2} />
+          <Image className="rounded-lg" alt="Carlos Bae" src={basedFashun22} />
         </a>
       </div>
       {/* PROOF OF SWEG */}
