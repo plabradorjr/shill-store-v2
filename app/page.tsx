@@ -1,11 +1,10 @@
 import Image from "next/image";
-import bootyBae from "@/public/models/bootyBae.jpg";
-import carlosBae from "@/public/models/carlosBae.jpg";
 import lilPudgyMaxBid from "@/public/models/lilPudgyMaxBid.png";
 import ethChad from "@/public/models/ethChad.jpg";
 import Footer from "./components/Footer";
 import rugChart from "@/public/rugChart.png";
 import basedFashun2 from "@/public/models/basedFashun2.png";
+import tubbyFullSendBae from "@/public/models/tubbyFullSendBae.png";
 
 export default function Home() {
   return (
@@ -69,25 +68,35 @@ export default function Home() {
       </div>
 
       <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 py-24 lg:px-32 justify-center items-center">
-        <div className="w-72 flex-col items-center justify-between gap-16 -rotate-12 mx-auto lg:w-80 md:w-80 cursor-not-allowed">
+        <a
+          href="/product/prod_NynldRJSvot4se?name=Max+Bidding+Pengu+-+medium&image=https%3A%2F%2Ffiles.stripe.com%2Flinks%2FMDB8YWNjdF8xRFJhY2tIdHB5elFOZ1pjfGZsX2xpdmVfcXJKNmlmRkxmTzMxR0lxeW5leVVDRlN4003o2Rz1mT&unit_amount=3700&id=prod_NynldRJSvot4se&description=Max+bidding&size=medium&tagNumber=693"
+          className="w-72 flex-col items-center justify-between gap-16 -rotate-12 mx-auto hover:rotate-0 md:w-80"
+        >
           <Image
             className="rounded-lg"
             src={lilPudgyMaxBid}
             alt="Lil pudgy max bidding"
           />
-        </div>
+        </a>
         <a
           href="/product/prod_NlQIziy5JoxKGZ?name=ETH+Daddy+Sweg+-+medium&image=https%3A%2F%2Ffiles.stripe.com%2Flinks%2FMDB8YWNjdF8xRFJhY2tIdHB5elFOZ1pjfGZsX2xpdmVfTzVvb0pBbHBSc2RXZ3dwMnRXZnZnVFVw00WyhsHmXO&unit_amount=3700&id=prod_NlQIziy5JoxKGZ&description=You+are+gonna+make+it.+You+can%27t+fuck+this+one+up%2C+seriously%2C+not+possible.+Listen+up%2C+champ%2C+it%27s+time+for+a+fucking+make+over%2C+bitch.+Draw+some+positive+attention+toward+yourself+for+a+change+and+pamp+up+ETH.&size=medium&tagNumber=69"
-          className="w-72 flex-col items-center justify-between gap-16 rotate-12 mx-auto lg:w-80 md:w-80"
+          className="w-72 flex-col items-center justify-between gap-16 rotate-12 mx-auto hover:rotate-0 md:w-80"
         >
           <Image className="rounded-lg" alt="ETH Bae" src={ethChad} />
         </a>
-        <div className="w-72 flex-col items-center justify-between gap-16 -rotate-6 mx-auto lg:w-80 md:w-80 cursor-not-allowed">
-          <Image className="rounded-lg" alt="ETH Chad" src={bootyBae} />
-        </div>
+        <a
+          href="/product/prod_NyneccS9LHBDoi?name=Full+Send+Tubby+-+medium+-+female&image=https%3A%2F%2Ffiles.stripe.com%2Flinks%2FMDB8YWNjdF8xRFJhY2tIdHB5elFOZ1pjfGZsX2xpdmVfaHVkb2puSHBTR2dzOWthU1J1R0QwWnlx00rOqVC4Th&unit_amount=3700&id=prod_NyneccS9LHBDoi&description=full+send&size=medium&tagNumber=692"
+          className="w-72 flex-col items-center justify-between gap-16 -rotate-6 mx-auto hover:rotate-0 md:w-80"
+        >
+          <Image
+            className="rounded-lg"
+            alt="Tubby Cat Full Send shirt"
+            src={tubbyFullSendBae}
+          />
+        </a>
         <a
           href="/product/prod_NtglYM48Pu6ezm?name=Based+Fashun+-+medium&image=https%3A%2F%2Ffiles.stripe.com%2Flinks%2FMDB8YWNjdF8xRFJhY2tIdHB5elFOZ1pjfGZsX2xpdmVfam5QWVJ3MURpZ2JlSUYzQ1hzbHdQUFRT00NfrSUdLQ&unit_amount=3700&id=prod_NtglYM48Pu6ezm&description=Pretend+you+don%27t+suck+at+trading+NFTs+and+well%2C+life.+Respect+the+pamp%2C+papi+senpai.+Based+season+will+soon+commence.+Btw%2C+this+shirt+is+using+Champion+Apparel%2C+so+your+wife%27s+boyfriend+will+be+happy&size=medium&tagNumber=691"
-          className="w-72 flex-col items-center justify-between gap-16 rotate-12 mx-auto lg:w-80 md:w-80"
+          className="w-72 flex-col items-center justify-between gap-16 rotate-12 mx-auto hover:rotate-0 md:w-80"
         >
           <Image className="rounded-lg" alt="Carlos Bae" src={basedFashun2} />
         </a>
