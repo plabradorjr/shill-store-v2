@@ -4,6 +4,7 @@ import formatPrice from "@/util/PriceFormat";
 import AddCart from "./AddCart";
 import getProducts from "@/util/getProducts";
 import Link from "next/link";
+import peepoLife from "@/public/emotes/peepoLife.png";
 
 export default async function Product({ searchParams }: SearchParamTypes) {
   const currentSize = searchParams.size;
@@ -104,6 +105,30 @@ export default async function Product({ searchParams }: SearchParamTypes) {
         ) : (
           <AddCart {...searchParams} />
         )}
+      </div>
+
+      {/* view other products button */}
+      <div className="grid grid-cols-1 font-medium">
+        <div className="mt-10 md:pt-20 flex items-center">
+          <span className="text-sm">Don't like this shit?</span>
+          <Image
+            src={peepoLife}
+            height={55}
+            className="ml-1"
+            style={{ marginTop: "-35px" }}
+          ></Image>
+        </div>
+        <div className="mt-0 pt-0 text-sm">
+          uWu, senpai gib one more chance pls.
+        </div>
+        <div className="pb-10 pt-1">
+          <Link
+            href="/products"
+            className="btn btn-outline btn-accent w-full text-xs"
+          >
+            View all products
+          </Link>
+        </div>
       </div>
     </div>
   );

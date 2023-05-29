@@ -20,18 +20,18 @@ export default function Product({
         query: { name, image, unit_amount, id, description, size, tagNumber },
       }}
     >
-      <div>
+      <div className="flex flex-col items-center">
         <img
           src={image}
           alt={name}
           className="w-96 h-96 object-cover rounded-lg"
         />
-        <div className="font-medium py-2">
-          <h1>{name}</h1>
-          <p className="text-sm">size: {size}</p>
-          <h2 className="text-sm text-primary">
+        <div className="font-medium">
+          {/* <h1>{name}</h1> */}
+          {/* <p className="text-sm">size: {size}</p> */}
+          {/* <h2 className="text-sm text-teal-500">
             {unit_amount !== null ? formatPrice(unit_amount) : "N/A"}
-          </h2>
+          </h2> */}
         </div>
       </div>
     </Link>
