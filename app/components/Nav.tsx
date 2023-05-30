@@ -23,25 +23,11 @@ export default function Nav() {
         </div>
       </Link>
       <ul className="flex items-center gap-8">
-        {/* Toggle the cart */}
-        <li
-          onClick={() => cartStore.toggleCart()}
-          className="flex items-center text-3xl relative cursor-pointer"
-        >
-          <AiFillShopping />
-          <AnimatePresence>
-            {cartStore.cart.length > 0 && (
-              <motion.span
-                animate={{ scale: 1 }}
-                initial={{ scale: 0 }}
-                exit={{ scale: 0 }}
-                className="bg-primary text-white text-sm font-bold w-5 h-5 rounded-full absolute left-4 bottom-4 flex items-center justify-center"
-              >
-                {cartStore.cart.length}
-              </motion.span>
-            )}
-          </AnimatePresence>
-        </li>
+        {/* Shop all button */}
+        <Link href={"/products"}>
+          <div className="font-bold text-lg text-white">Shop all</div>
+        </Link>
+
         {/* DARK MODE INSET HERE */}
         {/* If the user is not signed in */}
         {!session?.user && (
@@ -90,6 +76,25 @@ export default function Nav() {
             </div>
           </li>
         )}
+        {/* Toggle the cart */}
+        <li
+          onClick={() => cartStore.toggleCart()}
+          className="flex items-center text-3xl relative cursor-pointer"
+        >
+          <AiFillShopping />
+          <AnimatePresence>
+            {cartStore.cart.length > 0 && (
+              <motion.span
+                animate={{ scale: 1 }}
+                initial={{ scale: 0 }}
+                exit={{ scale: 0 }}
+                className="bg-primary text-white text-sm font-bold w-5 h-5 rounded-full absolute left-4 bottom-4 flex items-center justify-center"
+              >
+                {cartStore.cart.length}
+              </motion.span>
+            )}
+          </AnimatePresence>
+        </li>
       </ul>
       <AnimatePresence>{cartStore.isOpen && <Cart />}</AnimatePresence>
     </nav>
