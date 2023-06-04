@@ -110,7 +110,7 @@ export default function Home() {
             <iframe
               width="100%"
               height="550"
-              src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1`}
+              src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&loop=1&playlist=${youtubeVideoId}`}
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
