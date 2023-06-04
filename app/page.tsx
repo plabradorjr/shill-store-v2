@@ -1,4 +1,11 @@
+"use client";
+
 import Image from "next/image";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import Modal from "react-modal";
+
 import lilPudgyMaxBid from "@/public/models/lilPudgyMaxBid.png";
 import ethChad from "@/public/models/ethChad.jpg";
 import Footer from "./components/Footer";
@@ -6,7 +13,36 @@ import rugChart from "@/public/rugChart.png";
 import basedFashun22 from "@/public/models/basedFashun22.png";
 import tubbyFullSendBae from "@/public/models/tubbyFullSendBae.png";
 
+// Modal.setAppElement("#__next"); // For accessibility
+
 export default function Home() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const youtubeVideoId = "A2app1pyHHs";
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "auto",
+      transform: "translate(-50%, -50%)",
+      width: "85%", // Change this for your preferred size
+      height: "600", // Change this for your preferred size
+      backgroundColor: "#1E293B", // bg-slate-600 in Tailwind CSS
+    },
+    overlay: {
+      backgroundColor: "rgba(0, 0, 0, 0.75)", // Darken the background
+    },
+  };
   return (
     <>
       {/* Hero Section */}
@@ -25,7 +61,7 @@ export default function Home() {
         <div className="mx-auto max-w-2xl py-24 sm:py-48 lg:py-48">
           <div className="text-center">
             <h1 className="lg:text-5xl font-bold tracking-tight text-white text-3xl mb-2">
-              Limited Edition
+              Rare Edition
             </h1>
             <h1 className="lg:text-5xl font-bold tracking-tight text-white text-3xl">
               Shitcoin Fashun
@@ -57,14 +93,37 @@ export default function Home() {
         </div>
       </div>
       {/* Images */}
-      <p className="mt-8 text-2xl font-bold tracking-tight text-white text-center lg:text-3xl">
-        The worst best crypto swags in the world
-      </p>
-      <div className="text-center mt-2">
-        <span className="text-center italic">
-          "Fashion changes, swagger lasts forever"
-        </span>
-        <span className="text-center"> — some milady maxi</span>
+      <div>
+        <Link href="#" onClick={openModal}>
+          <div className="mt-8 text-2xl font-bold tracking-tight text-white text-center lg:text-3xl">
+            Do you feel bonita?
+          </div>
+          <div className="text-center mt-2">Because you look bonita.</div>
+        </Link>
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          contentLabel="My dialog"
+          style={customStyles} // Apply the styles here
+        >
+          <div className="flex items-center justify-center pb-4">
+            <iframe
+              width="100%"
+              height="550"
+              src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1`}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+          <button
+            onClick={closeModal}
+            className="btn btn-warning content-center text-center"
+          >
+            Close
+          </button>
+        </Modal>
       </div>
 
       <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 py-24 lg:px-32 justify-center items-center">

@@ -17,8 +17,8 @@ export default async function Products() {
         <Image
           src={peepoDanceSad}
           alt="peepo dance sad"
-          width={88} // Replace 100 with your estimated width value
-          height={88}
+          width={50} // Replace 100 with your estimated width value
+          height={50}
         />
       </div>
       <div className="text-center lg:text-5xl font-bold tracking-tight text-white text-3xl mb-10">

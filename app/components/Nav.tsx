@@ -19,7 +19,9 @@ export default function Nav() {
       <Link href={"/"}>
         <div className="flex">
           <h1 className="rotate-90 text-4xl">🚀</h1>
-          <p className="font-bold text-2xl text-white">Shill.lol</p>
+          <p className="font-bold text-2xl text-white sm:block hidden">
+            Shill.lol
+          </p>
         </div>
       </Link>
       <ul className="flex items-center gap-8">
