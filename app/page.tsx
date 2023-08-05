@@ -66,9 +66,9 @@ export default function Home() {
             <h1 className="lg:text-5xl font-bold tracking-tight text-white text-3xl">
               Shitcoin Fashun
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
+            {/* <p className="mt-6 text-lg leading-8 text-gray-300">
               Free NFT airdrop for every purchase
-            </p>
+            </p> */}
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="/product/prod_NlQIziy5JoxKGZ?name=ETH+Daddy+Sweg+-+medium&image=https%3A%2F%2Ffiles.stripe.com%2Flinks%2FMDB8YWNjdF8xRFJhY2tIdHB5elFOZ1pjfGZsX2xpdmVfTzVvb0pBbHBSc2RXZ3dwMnRXZnZnVFVw00WyhsHmXO&unit_amount=3700&id=prod_NlQIziy5JoxKGZ&description=You+are+gonna+make+it.+You+can%27t+fuck+this+one+up%2C+seriously%2C+not+possible.+Listen+up%2C+champ%2C+it%27s+time+for+a+fucking+make+over%2C+bitch.+Draw+some+positive+attention+toward+yourself+for+a+change+and+pamp+up+ETH.&size=medium&tagNumber=69"
@@ -161,7 +161,7 @@ export default function Home() {
         </a>
       </div>
       {/* PROOF OF SWEG */}
-      <div className="bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
+      {/* <div className="bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
         <div className="mx-auto center max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white">
             Proof of Sweg
@@ -181,7 +181,7 @@ export default function Home() {
           </blockquote>{" "}
           <script async src="https://platform.twitter.com/widgets.js"></script>
         </div>
-      </div>
+      </div> */}
       <div>
         <Footer />
       </div>
